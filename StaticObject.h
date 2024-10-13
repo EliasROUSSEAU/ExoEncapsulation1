@@ -1,4 +1,4 @@
-#ifndef STATICONJECT_H__
+#ifndef STATICOBJECT_H__
 #define STATICOBJECT_H__
 
 #include <iostream>

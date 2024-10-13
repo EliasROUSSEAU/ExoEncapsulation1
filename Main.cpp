@@ -7,9 +7,9 @@
 #include "Mob.h"
 #include "Player.h"
 #include "Vector2.h"
+#include "World.h" // Ajoutez cette ligne pour inclure le fichier World.h
 
 int main() {
-
     // Initialiser les objets
     StaticObject staticObj(1.0f, 2.0f);
     BreakableObject breakableObj(3.0f, 4.0f, 50.0f, 50.0f);
@@ -39,6 +39,15 @@ int main() {
     player.TakeDamage(15.0f);
     player.TakeDamage(20.0f); // Mort
     player.Attack(&breakableObj); // Player attaque BreakableObject
+
+    // Initialiser et exécuter le monde
+    World world; // Crée une instance de World
+    world.Init(); // Initialise les entités dans le monde
+
+    // Exécute plusieurs étapes de simulation
+    for (int i = 0; i < 10; ++i) { // Par exemple, simuler 10 étapes
+        world.Step(); // Appelle la fonction Step pour chaque étape
+    }
 
     return 0;
 }
