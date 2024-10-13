@@ -7,7 +7,7 @@
 #include "Mob.h"
 #include "Player.h"
 #include "Vector2.h"
-#include "World.h" // Ajoutez cette ligne pour inclure le fichier World.h
+#include "World.h"
 
 int main() {
     // Initialiser les objets
